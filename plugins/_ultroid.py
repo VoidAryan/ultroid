@@ -15,9 +15,9 @@ from . import LOG_CHANNEL, LOGS, Button, asst, eor, get_string, ultroid_cmd
 
 REPOMSG = """
 • **ULTROID USERBOT** •\n
-• Repo - [Click Here](https://github.com/TeamUltroid/Ultroid)
+• Group - [Click Here](https://t.me/voidxtoxic)
 • Addons - [Click Here](https://github.com/TeamUltroid/UltroidAddons)
-• Support - @UltroidSupport
+• Network - @void_network
 """
 
 RP_BUTTONS = [
@@ -28,7 +28,7 @@ RP_BUTTONS = [
     [Button.url("Support Group", "t.me/ultroidsupport")],
 ]
 
-ULTSTRING = """🎇 **Thanks for Deploying Ultroid Userbot!**
+ULTSTRING = """🎇 **Sup Baka Thanks for deploying me!**
 
 • Here, are the Some Basic stuff from, where you can Know, about its Usage."""
 
@@ -59,7 +59,7 @@ async def useUltroid(rs):
     msg = await asst.send_message(
         LOG_CHANNEL,
         ULTSTRING,
-        file="https://telegra.ph/file/54a917cc9dbb94733ea5f.jpg",
+        file="https://telegra.ph/file/2fa00dd948636be05e854.jpg",
         buttons=button,
     )
     if not (rs.chat_id == LOG_CHANNEL and rs.client._bot):
