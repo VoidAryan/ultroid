@@ -95,15 +95,19 @@ buttons = [
 
 # Will move to strings
 alive_txt = """
-The Ultroid Userbot
+[The VOID](t.me/voidxtoxic)
 
   ◍ Version - {}
-  ◍ Py-Ultroid - {}
+  ◍ Python - {}
   ◍ Telethon - {}
 """
 
-in_alive = "{}\n\n🌀 <b>Ultroid Version -><b> <code>{}</code>\n🌀 <b>PyUltroid -></b> <code>{}</code>\n🌀 <b>Python -></b> <code>{}</code>\n🌀 <b>Uptime -></b> <code>{}</code>\n🌀 <b>Branch -></b> [ {} ]\n\n• <b>Join @TheUltroid</b>"
-
+in_alive = "{}\n\n🌀 <b>VOID Version -><b> <code>{}</code>\n🌀 <b>Python -></b> <code>{}</code>\n🌀 <b>Uptime -></b> <code>{}</code>\"
+buttons = [
+    [
+        Button.url(get_string("in_alive"), "t.me/miyamura_family"),
+        Button.url(get_string("in_alive"), "t.me/void_network"),
+    ]
 
 @callback("alive")
 async def alive(event):
@@ -147,7 +151,7 @@ async def lol(ult):
             kk,
         )
         if _e := udB.get_key("ALIVE_EMOJI"):
-            als = als.replace("🌀", _e)
+            als = als.replace("×", _e)
     else:
         parse = "md"
         als = (get_string("alive_1")).format(
@@ -161,7 +165,7 @@ async def lol(ult):
             kk,
         )
         if a := udB.get_key("ALIVE_EMOJI"):
-            als = als.replace("✵", a)
+            als = als.replace("×", a)
     if pic:
         try:
             await ult.reply(
@@ -287,7 +291,7 @@ async def inline_alive(ult):
         kk,
     )
     if _e := udB.get_key("ALIVE_EMOJI"):
-        als = als.replace("🌀", _e)
+        als = als.replace("×", _e)
     builder = ult.builder
     if pic:
         try:
@@ -308,7 +312,7 @@ async def inline_alive(ult):
                     await builder.document(
                         pic,
                         title="Inline Alive",
-                        description="@TheUltroid",
+                        description="@void_network",
                         parse_mode="html",
                         buttons=buttons,
                     )
